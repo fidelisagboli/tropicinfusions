@@ -1,0 +1,99 @@
+body {
+  font-family: 'Della Respira', serif;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Quattrocento', serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-accent-tropic {
+  color: #9eff1f;
+}
+
+.header-accent-infusions {
+  color: #9440dd;
+}
+
+h2 {
+  font-family: 'Della Respira', serif;
+  font-size: 2.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+  color: black;
+  text-align: center;
+}
+
+.flavor-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flavor-menu a {
+  font-family: 'Della Respira', serif;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  padding: 1rem 2rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  transition: filter 0.3s ease;
+}
+
+/* Individual button colors */
+.flavor-menu a.mango    { background-color: #f19a5c; }
+.flavor-menu a.kiwi     { background-color: #e76366; }
+.flavor-menu a.carrot   { background-color: #1ebda5; }
+.flavor-menu a.celery   { background-color: #64aa38; }
+.flavor-menu a.cucumber { background-color: #7cce6b; }
+
+.flavor-menu a:hover {
+  filter: brightness(0.9);
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Footer styling */
+footer {
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  background: transparent;
+  color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #background-video {
+    display: none;
+  }
+  .flavor-menu {
+    gap: 0.5rem;
+  }
+  .flavor-menu a {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    width: 90%;
+    max-width: 320px;
+  }
+  footer {
+    padding: 1rem 0;
+  }
+}
