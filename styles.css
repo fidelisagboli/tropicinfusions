@@ -119,7 +119,12 @@ footer {
     margin: 0 auto 1rem auto;
     width: 100%;
   }
+
+  .flavor-image {
+    width: 90%;
+    max-width: 350px;
 }
+
   .flavor-menu {
     gap: 0.5rem;
   }
