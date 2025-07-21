@@ -120,20 +120,33 @@ footer {
     width: 100%;
   }
 
+  .flavor-container {
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  .flavor-text {
+    text-align: center;
+  }
+
   .flavor-image {
     width: 90%;
     max-width: 350px;
-}
+  }
 
   .flavor-menu {
     gap: 0.5rem;
   }
+
   .flavor-menu a {
     font-size: 1.2rem;
     padding: 0.75rem 1.5rem;
     width: 90%;
     max-width: 320px;
   }
+
   footer {
     padding: 1rem 0;
   }
