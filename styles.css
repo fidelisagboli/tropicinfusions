@@ -1,4 +1,10 @@
 body {
+  
+  background-image: url('../pics/mangopinelime.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
   font-family: 'Della Respira', serif;
   text-align: center;
   margin: 0;
@@ -77,6 +83,36 @@ footer {
   text-align: center;
   background: transparent;
   color: black;
+}
+
+/* Tagline styling */
+.tagline {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #333;
+}
+
+/* Flavor page layout */
+.flavor-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.flavor-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.flavor-text {
+  max-width: 500px;
+  text-align: left;
 }
 
 /* Responsive adjustments */
