@@ -81,9 +81,13 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-  #background-video {
-    display: none;
+  h1, h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 0 auto 1rem auto;
+    width: 100%;
   }
+}
   .flavor-menu {
     gap: 0.5rem;
   }
