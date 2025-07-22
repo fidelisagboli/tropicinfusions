@@ -115,11 +115,21 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
+  h1 {
+    font-size: 2.4rem;
+    font-family: 'Quattrocento', serif;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-family: 'Della Respira', serif;
+  }
+
   h1, h2 {
     text-align: center;
-    font-size: 2.2rem;
     margin: 0 auto 1rem auto;
     width: 100%;
+    line-height: 1.2;
   }
 
   .flavor-container {
