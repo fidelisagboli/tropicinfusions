@@ -51,11 +51,13 @@ h2 {
 }
 
 /* Individual button colors */
-.flavor-menu a.mango    { background-color: #f19a5c; }
-.flavor-menu a.kiwi     { background-color: #e76366; }
-.flavor-menu a.carrot   { background-color: #1ebda5; }
-.flavor-menu a.celery   { background-color: #64aa38; }
-.flavor-menu a.cucumber { background-color: #7cce6b; }
+.flavor-menu a.mango    { background:linear-gradient(90deg, #f19a5c, #f9db6f)}
+.flavor-menu a.kiwi     { background:linear-gradient(90deg, #e76366, #8355eb)}
+.flavor-menu a.carrot   { background:linear-gradient(45deg, #1ebda5, #e26a00, #ffe046)}
+.flavor-menu a.celery   { background:linear-gradient(45deg, #64aa38, #185100, #64aa38)}
+.flavor-menu a.cucumber { background:linear-gradient(180deg, #7cce6b, #d8ffd0)}
+.flavor-menu a.apple { background: linear-gradient(180def,#731919, #e52b2b)}
+.flavor-menu a.watermelon { background:linear-gradient(#aaff4e,#9a6bff,#ff44da)}
 
 .flavor-menu a:hover {
   filter: brightness(0.9);
