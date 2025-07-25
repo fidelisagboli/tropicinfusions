@@ -58,6 +58,9 @@ h2 {
 .flavor-menu a.cucumber   { background:linear-gradient(180deg, #7cce6b, #d8ffd0)}
 .flavor-menu a.apple      { background:linear-gradient(180deg, #731919, #e52b2b)}
 .flavor-menu a.watermelon { background:linear-gradient(45deg, #aaff4e,#9a6bff,#ff44da)}
+.flavor-menu a.grape { background:linear-gradient(45deg, #6da215)}
+.flavor-menu a.papaya { background:linear-gradient(180deg, #997300,#ffc000)}
+.flavor-menu a.citrus { background:linear-gradient(45deg, #431043,#d34681)}
 
 .flavor-menu a:hover {
   filter: brightness(0.9);
