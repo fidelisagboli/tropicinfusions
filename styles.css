@@ -126,6 +126,11 @@ body.citrus-page {
   background-size: cover;
 }
 
+body.grape-page {
+  background: url("background/grapealicious.png") no-repeat center center;
+  background-size: cover;
+}
+
 body[class$="-page"] {
   background-repeat: no-repeat;
   background-position: center center;
