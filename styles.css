@@ -101,6 +101,31 @@ body.celery-page {
   background-size: cover;
 }
 
+body.cucumber-page {
+  background: url("background/cucumber_lime_burst.png") no-repeat center center;
+  background-size: cover;
+}
+
+body.melon-page {
+  background: url("mesmerizing_melon_berry.png") no-repeat center center;
+  background-size: cover;
+}
+
+body.apple-page {
+  background: url("apple_berry_bliss.png") no-repeat center center;
+  background-size: cover;
+}
+
+body.papaya-page {
+  background: url("papaya_dream_fusion.png") no-repeat center center;
+  background-size: cover;
+}
+
+body.citrus-page {
+  background: url("citrus_berry_beetdown.png") no-repeat center center;
+  background-size: cover;
+}
+
 /* Footer styling */
 footer {
   width: 100%;
