@@ -76,6 +76,31 @@ h2 {
   z-index: -1;
 }
 
+/* flavor page background images*/
+body.main-page {
+  background: url("tropic_infusions.png") no-repeat center center;
+  background-size: cover;
+}
+
+body.mango-page {
+  background: url("mango_pine_paradise.png") no-repeat center center;
+  background-size: cover;
+}
+body.kiwi-page {
+  background: url("kiwi_berry_frenzy.png") no-repeat center center;
+  background-size: cover;
+}
+
+body.carrot-page {
+  background: url("charismatic_carrot_ginger.png") no-repeat center center;
+  background-size: cover;
+}
+
+body.celery-page {
+  background: url("celery_melon_booster.png") no-repeat center center;
+  background-size: cover;
+}
+
 /* Footer styling */
 footer {
   width: 100%;
