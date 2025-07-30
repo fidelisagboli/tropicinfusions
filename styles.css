@@ -139,13 +139,6 @@ body[class$="-page"] {
   min-height: 100vh;
 }
 
-@media (max-width: 600px) {
-  body.mango-page {
-    background-image: url("background/mobile/mango_pine_paradise-small.jpg");
-  }
-  /* …repeat for other flavors… */
-}
-
 /* Footer styling */
 footer {
   width: 100%;
