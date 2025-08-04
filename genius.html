@@ -8,8 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./navigation.css">
   <style>
     .genius-container {
       max-width: 900px;
@@ -34,18 +34,54 @@
 
   <!-- Background Music -->
   <audio id="bg-music" autoplay loop>
-    <source src="music/revenge.mp3" type="audio/mpeg">
+    <source src="./music/revenge.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
   <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar-title">
-      <a href="index.html">
+      <a href="./index.html">
         <span class="header-accent-tropic">Tropic</span>
         <span class="header-accent-infusions">Infusions</span>
       </a>
     </div>
     <div>
-      <a href="genius.html" class="genius">Juice Genius</a>
-      <a href=
+      <a href="./genius.html" class="genius">Juice Genius</a>
+      <a href="./about.html" class="about-link">About Us</a>
+    </div>
+  </nav>
+
+  <!-- Juice Genius Content -->
+  <div class="genius-container">
+    <p><strong>AI-Powered Juice Genius – Coming Soon!</strong></p>
+    <p>Our AI assistant will help you pick the perfect juice blend based on your taste and health goals. Stay tuned!</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-bar">
+    © 2025 Tropic Infusions – All Rights Reserved |
+    <a href="https://instagram.com/tropicinfusions" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/tropicinfusions" target="_blank">Facebook</a>
+  </footer>
+
+  <!-- Resume Music Script -->
+  <script>
+    const music = document.getElementById('bg-music');
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTime = localStorage.getItem('musicTime');
+      if (savedTime) music.currentTime = parseFloat(savedTime);
+      music.volume = 0.4;
+      music.play().catch(() => {
+        console.log('Autoplay blocked until user interacts');
+      });
+    });
+    window.addEventListener('beforeunload', () => {
+      localStorage.setItem('musicTime', music.currentTime);
+    });
+    document.addEventListener('click', () => {
+      if (music.paused) music.play();
+    });
+  </script>
+</body>
+</html>
