@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juice Genius - Tropic Infusions</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="navigation.css">
+  <style>
+    .genius-container {
+      max-width: 900px;
+      margin: 5rem auto;
+      padding: 3rem 2rem;
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+      font-size: 2rem;
+      line-height: 1.6;
+    }
+    @media (max-width: 600px) {
+      .genius-container {
+        font-size: 1.8rem;
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="genius-page">
+
+  <!-- Background Music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="music/revenge.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-title">
+      <a href="index.html">
+        <span class="header-accent-tropic">Tropic</span>
+        <span class="header-accent-infusions">Infusions</span>
+      </a>
+    </div>
+    <div>
+      <a href="juice-genius.html" class="juice-genius">Juice Genius</a>
+      <a href="about.html" class="about-link">About Us</a>
+    </div>
+  </nav>
+
+  <!-- Juice Genius Content -->
+  <div class="genius-container">
+    <p><strong>AI-Powered Juice Genius – Coming Soon!</strong></p>
+  </div>
+
+  <!-- Footer -->
+<footer class="footer-bar">
+  © 2025 Tropic Infusions – All Rights Reserved |
+  <a href="https://instagram.com/tropicinfusions" target="_blank">Instagram</a> |
+  <a href="https://facebook.com/tropicinfusions" target="_blank">Facebook</a>
+</footer>
+
+  <!-- Resume Music Script -->
+  <script>
+    const music = document.getElementById('bg-music');
+
+    // Resume from last time
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTime = localStorage.getItem('musicTime');
+      if (savedTime) {
+        music.currentTime = parseFloat(savedTime);
+      }
+      music.volume = 0.4;
+      music.play().catch(() => {
+        console.log('Autoplay blocked until user interacts');
+      });
+    });
+
+    // Save music time before leaving
+    window.addEventListener('beforeunload', () => {
+      localStorage.setItem('musicTime', music.currentTime);
+    });
+
+    // Play on first user click
+    document.addEventListener('click', () => {
+      if (music.paused) {
+        music.play();
+      }
+    });
+  </script>
+</body>
+</html>

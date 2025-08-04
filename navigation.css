@@ -1,0 +1,135 @@
+/* ===========================
+   ✅ Navbar
+=========================== */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Navbar Title */
+.navbar-title a {
+  text-decoration: none;
+  font-family: 'Quattrocento', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.navbar-title .header-accent-tropic {
+  color: #9440dd;
+  text-shadow: 0 0 5px #9440dd, 0 0 10px #9440dd;
+}
+
+.navbar-title .header-accent-infusions {
+  color: #9eff1f;
+  text-shadow: 0 0 5px #9eff1f, 0 0 10px #9eff1f;
+}
+
+.navbar a.juice-genius {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-family: 'Della Respira', serif;
+  transition: color 0.3s ease;
+}
+
+.navbar a.juice-genius:hover {
+  color: #9eff1f;
+}
+
+/* ===========================
+   ✅ Page Content
+=========================== */
+.page-content {
+  padding-top: 100px; /* push below navbar */
+  padding-bottom: 70px; /* keep above footer */
+}
+
+/* ✅ Flavor Menu */
+.flavor-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.flavor-menu a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 5px;
+  width: fit-content;
+  font-family: 'Della Respira', serif;
+  transition: background 0.3s ease;
+}
+
+.flavor-menu a:hover {
+  background: #9eff1f;
+  color: black;
+}
+
+/* ===========================
+   ✅ Footer Bar
+=========================== */
+.footer-bar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-family: 'Della Respira', serif;
+  font-size: 0.9rem;
+  z-index: 1000;
+}
+
+.footer-bar a {
+  color: #9eff1f;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-bar a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ===========================
+   ✅ Mobile Optimization
+=========================== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  .navbar-title a {
+    font-size: 1.8rem;
+  }
+  .navbar a.juice-genius {
+    margin-top: 0.3rem;
+    font-size: 1.4rem;
+  }
+}
+
+body.apple-page,
+body[class$="-page"] {
+  padding-top: 80px; /* adjust this number to match navbar height */
+}

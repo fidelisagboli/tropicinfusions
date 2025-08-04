@@ -5,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mesmerizing Melon Berry</title>
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../navigation.css">
   <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
 </head>
 <body class="melon-page">
 
-  </video>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-title">
+      <a href="../index.html">
+        <span class="header-accent-tropic">Tropic</span>
+        <span class="header-accent-infusions">Infusions</span>
+      </a>
+    </div>
+    <div class="navbar-links">
+      <a href="../juice-genius.html" class="juice-genius">Juice Genius</a>
+    </div>
+  </nav>
+
   <h1>Mesmerizing Melon Berry</h1>
   <div class="flavor-container">
     <img src="../labels/7.png" alt="Mesmerizing Melon Berry Label" class="flavor-image">
@@ -21,7 +34,43 @@
       <p><strong>Lime</strong> boosts vitamin C intake and aids in digestion and detoxification.</p>
       <p><strong>Mint</strong> soothes the digestive tract, supports fresh breath, and promotes mental clarity.</p>
       <p class="tagline">Berry-bright and deeply hydrating — packed with antioxidants to support skin, immunity, and natural detox.</p>
+    </div>
   </div>
-  </div>
+
+  <footer class="footer-bar">
+    © 2025 Tropic Infusions – All Rights Reserved |
+    <a href="https://instagram.com/tropicinfusions" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/tropicinfusions" target="_blank">Facebook</a>
+  </footer>
+
+  <!-- ✅ Background Music (Persistent Playback) -->
+  <audio id="bg-music" autoplay loop>
+    <source src="../music/revenge.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("bg-music");
+
+    // Restore previous playback position
+    const savedTime = localStorage.getItem("bgMusicTime");
+    if (savedTime) {
+      audio.currentTime = parseFloat(savedTime);
+    }
+
+    // Save playback time every second
+    setInterval(() => {
+      if (!audio.paused && !isNaN(audio.currentTime)) {
+        localStorage.setItem("bgMusicTime", audio.currentTime);
+      }
+    }, 1000);
+
+    // Chrome autoplay policy fix
+    document.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play().catch(err => console.log("Autoplay blocked:", err));
+      }
+    }, { once: true });
+  </script>
 </body>
 </html>

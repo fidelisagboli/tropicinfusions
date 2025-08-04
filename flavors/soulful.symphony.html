@@ -1,0 +1,59 @@
+ <style>
+    /* ✅ Navbar styling */
+    .navbar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    .navbar-title a {
+      text-decoration: none;
+      font-family: 'Quattrocento', serif;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 
+        0 0 5px #9440dd,
+        0 0 10px #9eff1f,
+        0 0 15px #9eff1f;
+      transition: text-shadow 0.3s ease;
+    }
+
+    .navbar-title a:hover {
+      text-shadow: 
+        0 0 8px #9440dd,
+        0 0 16px #9eff1f,
+        0 0 24px #9eff1f;
+    }
+
+    .navbar-title .header-accent-tropic {
+      color: #9440dd;
+    }
+    .navbar-title .header-accent-infusions {
+      color: #9eff1f;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover {
+      color: #9eff1f;
+    }
+
+    /* Push content below fixed navbar */
+    .page-content {
+      padding-top: 80px;
+    }
+  </style>

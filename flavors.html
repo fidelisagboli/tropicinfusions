@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tropic Infusions</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="navigation.css">
+</head>
+<body class="flavors-page">
+  
+  <!-- Background Music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="music/revenge.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-title">
+      <a href="index.html">
+        <span class="header-accent-tropic">Tropic</span>
+        <span class="header-accent-infusions">Infusions</span>
+      </a>
+    </div>
+    <div>
+      <a href="juice-genius.html" class="juice-genius">Juice Genius</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="page-content">
+    <nav class="flavor-menu">
+      <a href="flavors/mango-pine-paradise.html" class="mango">Mango Pine Paradise</a>
+      <a href="flavors/kiwi-berry-frenzy.html" class="kiwi">Kiwi Berry Frenzy</a>
+      <a href="flavors/charismatic-carrot-ginger.html" class="carrot">Charismatic Carrot Ginger</a>
+      <a href="flavors/celery-melon-booster.html" class="celery">Celery Melon Booster</a>
+      <a href="flavors/cucumber-lime-burst.html" class="cucumber">Cucumber Lime Burst</a>
+      <a href="flavors/apple-berry-bliss.html" class="apple">Apple Berry Bliss</a>
+      <a href="flavors/mesmerizing-melon-berry.html" class="watermelon">Mesmerizing Melon Berry</a>
+      <a href="flavors/grapealicious.html" class="grape">Grape-a-licious</a>
+      <a href="flavors/papaya-dream-fusion.html" class="papaya">Papaya Dream Fusion</a>
+      <a href="flavors/citrus-berry-beetdown.html" class="citrus">Citrus Berry Beetdown</a>
+    </nav>
+  </div>
+ 
+  <!-- Footer -->
+  <footer class="footer-bar">
+    © 2025 Tropic Infusions – All Rights Reserved |
+    <a href="https://instagram.com/tropicinfusions" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/tropicinfusions" target="_blank">Facebook</a>
+  </footer>
+
+  <!-- Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/687fe0fc416fc119149cd6ac/1j0podmrf';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    // Resume music from last time
+    const music = document.getElementById('bg-music');
+    window.addEventListener('beforeunload', () => {
+      localStorage.setItem('musicTime', music.currentTime);
+    });
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTime = localStorage.getItem('musicTime');
+      if (savedTime) {
+        music.currentTime = parseFloat(savedTime);
+      }
+      music.volume = 0.4;
+    });
+    document.addEventListener('click', () => {
+      if (music.paused) {
+        music.play().catch(err => console.log('Autoplay blocked:', err));
+      }
+    });
+  </script>
+</body>
+</html>

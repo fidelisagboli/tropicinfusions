@@ -5,11 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kiwi Berry Frenzy</title>
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../navigation.css">
   <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
 </head>
 <body class="kiwi-page">
    <div class="background-image"></div>
+
+     <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-title">
+      <a href="../index.html">
+        <span class="header-accent-tropic">Tropic</span>
+        <span class="header-accent-infusions">Infusions</span>
+      </a>
+    </div>
+    <div class="navbar-links">
+      <a href="../juice-genius.html" class="juice-genius">Juice Genius</a>
+    </div>
+  </nav>
     
   <h1>Kiwi Berry Frenzy</h1>
   <div class="flavor-container">
@@ -20,7 +34,28 @@
       <p><strong>Pineapple</strong> is anti-inflammatory and supports digestion thanks to bromelain.</p>
       <p><strong>Cumin</strong> is a source of iron and antioxidants, supports digestion, and may help regulate blood sugar.</p>
       <p class="tagline">A vitamin C explosion — immune-boosting and gut-loving with natural sweetness.</p>
+    </div>
   </div>
-  </div>
-</body>
-</html>
+
+  <footer class="footer-bar">
+    © 2025 Tropic Infusions – All Rights Reserved |
+    <a href="https://instagram.com/tropicinfusions" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/tropicinfusions" target="_blank">Facebook</a>
+  </footer>
+
+  <!-- ✅ Background Music (Persistent Playback) -->
+  <audio id="bg-music" autoplay loop>
+    <source src="../music/revenge.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("bg-music");
+
+    // Restore previous playback position
+    const savedTime = localStorage.getItem("bgMusicTime");
+    if (savedTime) {
+      audio.currentTime = parseFloat(savedTime);
+    }
+
+    // Save playback time
