@@ -148,3 +148,21 @@ body[class$="-page"] {
     white-space: nowrap;
   }
 }
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: row !important;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar a {
+    font-size: 1.1rem;
+    padding: 0.3rem;
+  }
+
+  .navbar-title a {
+    font-size: 1.4rem;
+  }
+}
