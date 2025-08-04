@@ -133,3 +133,18 @@ body.apple-page,
 body[class$="-page"] {
   padding-top: 80px; /* adjust this number to match navbar height */
 }
+
+/* Keep navbar links horizontal on mobile */
+@media (max-width: 600px) {
+  .navbar div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    flex-wrap: nowrap;
+  }
+
+  .navbar div a {
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+}
