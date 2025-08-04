@@ -101,12 +101,12 @@ body.genius-page {
 }
 
 body.flavors-page {
-  background: url(".background/tropic_infusions.png") no-repeat center center;
+  background: url("background/tropic_infusions.png") no-repeat center center;
   background-size: cover;
 }
 
 body.mango-page {
-  background: url(".background/mango_pine_paradise.png") no-repeat center center;
+  background: url("background/mango_pine_paradise.png") no-repeat center center;
   background-size: cover;
 }
 body.kiwi-page {
