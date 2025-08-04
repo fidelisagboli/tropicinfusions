@@ -162,15 +162,6 @@ body[class$="-page"] {
   min-height: 100vh;
 }
 
-/* Footer styling */
-footer {
-  width: 100%;
-  padding: 2rem 0;
-  text-align: center;
-  background: transparent;
-  color: black;
-}
-
 /* Tagline styling */
 .tagline {
   margin-top: 2rem;
@@ -248,11 +239,6 @@ footer {
     max-width: 320px;
   }
 
-  footer {
-    padding: 1rem 0;
-  }
-}
-
 /* Capitalize only h1 inside flavor pages */
 body[class$="-page"] h1 {
   text-transform: capitalize !important;
@@ -277,4 +263,23 @@ html, body {
   width: 90%;
   max-width: 350px;
   box-sizing: border-box;
+}
+
+.footer-bar {
+  margin-top: auto;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 0.9rem;
+  color: #ddd;
+  text-align: center;
+}
+
+.footer-bar a {
+  color: #9eff1f;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-bar a:hover {
+  text-shadow: 0 0 12px #9eff1f;
 }
