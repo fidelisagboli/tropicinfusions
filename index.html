@@ -174,27 +174,30 @@
 
 
   <script>
-    const music = document.getElementById('bg-music');
-    window.addEventListener('beforeunload', () => {
-      localStorage.setItem('musicTime', music.currentTime);
+      window.addEventListener('pageshow', () => {
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.style.color = 'white';      // Reset color
+      link.classList.remove('active'); // Reset "active" class if any
+      link.blur();                     // Remove focus highlight
     });
-    window.addEventListener('DOMContentLoaded', () => {
-      const savedTime = localStorage.getItem('musicTime');
-      if (savedTime) {
-        music.currentTime = parseFloat(savedTime);
-      }
-      music.volume = 0.4; // volume tweak
-    });
-    document.addEventListener('click', () => {
-      if (music.paused) {
-        music.play().catch(err => console.log('Autoplay blocked:', err));
-      }
-    });
+  });
 
-    // Remove focus highlight when returning to index page on mobile
-    window.addEventListener('pageshow', () => {
-        document.querySelectorAll('.navbar a').forEach(link => link.blur());
-    });
+  const music = document.getElementById('bg-music');
+  window.addEventListener('beforeunload', () => {
+    localStorage.setItem('musicTime', music.currentTime);
+  });
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTime = localStorage.getItem('musicTime');
+    if (savedTime) {
+      music.currentTime = parseFloat(savedTime);
+    }
+    music.volume = 0.4; // volume tweak
+  });
+  document.addEventListener('click', () => {
+    if (music.paused) {
+      music.play().catch(err => console.log('Autoplay blocked:', err));
+    }
+  });
   </script>
 </body>
 </html>

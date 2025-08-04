@@ -210,3 +210,7 @@ body[class$="-page"] h1 {
 .footer-bar a:hover {
   text-shadow: 0 0 12px #9eff1f;
 }
+
+body[class$="-page"] h1:first-of-type {
+  padding-top: 120px; /* adjust if needed */
+}
