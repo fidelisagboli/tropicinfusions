@@ -190,6 +190,11 @@
         music.play().catch(err => console.log('Autoplay blocked:', err));
       }
     });
+
+    // Remove focus highlight when returning to index page on mobile
+    window.addEventListener('pageshow', () => {
+        document.querySelectorAll('.navbar a').forEach(link => link.blur());
+    });
   </script>
 </body>
 </html>

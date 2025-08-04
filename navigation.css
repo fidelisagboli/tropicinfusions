@@ -44,6 +44,10 @@
   transition: color 0.3s ease;
 }
 
+.navbar a:visited {
+  color: white;
+}
+
 .navbar a.juice-genius:hover {
   color: #9eff1f;
 }
