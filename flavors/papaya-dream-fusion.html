@@ -35,3 +35,42 @@
       <p><strong>Cinnamon</strong> helps regulate blood sugar, support circulation, and boost digestion.</p>
       <p class="tagline">Bright, smooth, and enzyme-rich — great for digestion, immunity, and glowing skin.</p>
     </d
+
+  <footer class="footer-bar">
+    © 2025 Tropic Infusions – All Rights Reserved |
+    <a href="https://instagram.com/tropicinfusions" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/tropicinfusions" target="_blank">Facebook</a>
+  </footer>
+
+  <!-- ✅ Background Music (Persistent) -->
+  <audio id="bg-music" autoplay loop>
+    <source src="../music/revenge.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("bg-music");
+
+    // Resume saved playback position if available
+    const savedTime = localStorage.getItem("bgMusicTime");
+    if (savedTime) {
+      audio.currentTime = parseFloat(savedTime);
+    }
+
+    // Save playback time every second
+    setInterval(() => {
+      if (!audio.paused && !isNaN(audio.currentTime)) {
+        localStorage.setItem("bgMusicTime", audio.currentTime);
+      }
+    }, 1000);
+
+    // ✅ Chrome autoplay policy workaround
+    document.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play().catch(err => console.log("Autoplay blocked:", err));
+      }
+    }, { once: true });
+  </script>
+
+</body>
+</html>

@@ -68,6 +68,7 @@ h2 {
 .flavor-menu a.grape      { background: linear-gradient(45deg, #6da215, #9edc4c); }
 .flavor-menu a.papaya     { background: linear-gradient(180deg, #997300, #ffc000); }
 .flavor-menu a.citrus     { background: linear-gradient(45deg, #431043, #d34681); }
+.flavor-menu a.soulfruit  { background: linear-gradient(45deg, #381313, #ee8e71); }
 
 .flavor-menu a:hover {
   filter: brightness(0.9);
@@ -99,9 +100,10 @@ body.celery-page { background: url("background/celery_melon_booster.png") no-rep
 body.cucumber-page { background: url("background/cucumber_lime_burst.png") no-repeat center center / cover; }
 body.melon-page { background: url("background/mesmerizing_melon_berry.png") no-repeat center center / cover; }
 body.apple-page { background: url("background/apple_berry_bliss.png") no-repeat center center / cover; }
+body.grape-page { background: url("background/grapealicious.png") no-repeat center center / cover; }
 body.papaya-page { background: url("background/papaya_dream_fusion.png") no-repeat center center / cover; }
 body.citrus-page { background: url("background/citrus_berry_beetdown.png") no-repeat center center / cover; }
-body.grape-page { background: url("background/grapealicious.png") no-repeat center center / cover; }
+body.soulfruit-page { background: url("background/soulfruit_symphony.png") no-repeat center center / cover; }
 
 body[class$="-page"] {
   background-repeat: no-repeat;
@@ -111,7 +113,7 @@ body[class$="-page"] {
   min-height: 100vh;
 }
 
-/* ✅ Capitalize h1 only on flavor pages */
+/* Capitalize h1 only on flavor pages */
 body[class$="-page"] h1 {
   text-transform: capitalize !important;
   margin-top: 0 !important;

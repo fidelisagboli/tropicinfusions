@@ -1,5 +1,5 @@
 /* ===========================
-   ✅ Navbar
+    Navigation Bar
 =========================== */
 .navbar {
   width: 100%;
@@ -53,14 +53,14 @@
 }
 
 /* ===========================
-   ✅ Page Content
+   Page Content
 =========================== */
 .page-content {
   padding-top: 100px; /* push below navbar */
   padding-bottom: 70px; /* keep above footer */
 }
 
-/* ✅ Flavor Menu */
+/* Flavor Menu */
 .flavor-menu {
   margin: 0;
   padding: 0;
@@ -87,7 +87,7 @@
 }
 
 /* ===========================
-   ✅ Footer Bar
+   Footer Bar
 =========================== */
 .footer-bar {
   width: 100%;
@@ -116,7 +116,7 @@
 }
 
 /* ===========================
-   ✅ Mobile Optimization
+   Mobile Optimization
 =========================== */
 @media (max-width: 600px) {
   .main-header {
@@ -147,7 +147,7 @@
     font-size: 0.8rem;
   }
 
-  /* ✅ Prevent visited links from staying highlighted on mobile */
+  /* Prevent visited links from staying highlighted on mobile */
   .navbar a:visited {
     color: white !important;
     text-shadow: none !important;
