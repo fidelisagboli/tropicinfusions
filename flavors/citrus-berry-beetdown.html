@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citrus Berry Beetdown</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../navigation.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+</head>
+<body class="citrus-page">
+
+    <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-title">
+      <a href="../index.html">
+        <span class="header-accent-tropic">Tropic</span>
+        <span class="header-accent-infusions">Infusions</span>
+      </a>
+    </div>
+    <div class="navbar-links">
+      <a href="../genius.html" class="genius-page">Juice Genius</a>
+    </div>
+  </nav>
+
+  <h1>Citrus Berry Beetdown</h1>
+  <div class="flavor-container">
+    <img src="../labels/10.png" alt="Citrus Berry Beetdown Label" class="flavor-image">
+    <div class="flavor-text">
+      <p><strong>Beet</strong> is rich in nitrates; supports circulation, lowers blood pressure, and boosts endurance.</p>
+      <p><strong>Raspberry</strong> is high in antioxidants and fiber; supports heart health and reduces inflammation.</p>
+      <p><strong>Orange</strong> is loaded with vitamin C; supports immune function, skin health, and hydration.</p>
+      <p><strong>Ginger</strong> is a natural anti-inflammatory that helps with nausea and digestion.</p>
+      <p class="tagline">Antioxidant-rich and anti-inflammatory — supports healthy blood flow, digestive balance, and immune defense.</p>
+    </div>
+  </div>
+
+    <footer class="footer-bar">
+    © 2025 Tropic Infusions – All Rights Reserved |
+    <a href="https://instagram.com/tropicinfusions" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/tropicinfusions" target="_blank">Facebook</a>
+  </footer>
+
+  <!-- ✅ Background Music (Persistent) -->
+  <audio id="bg-music" autoplay loop>
+    <source src="../music/revenge.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("bg-music");
+
+    // Resume saved playback position if available
+    const savedTime = localStorage.getItem("bgMusicTime");
+    if (savedTime) {
+      audio.currentTime = parseFloat(savedTime);
+    }
+
+    // Save playback time every second
+    setInterval(() => {
+      if (!audio.paused && !isNaN(audio.currentTime)) {
+        localStorage.setItem("bgMusicTime", audio.currentTime);
+      }
+    }, 1000);
+
+    // ✅ Unmute on first user click (autoplay policy workaround)
+    document.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play().catch(err => console.log("Autoplay blocked:", err));
+      }
+    }, { once: true });
+  </script>
+
+</body>
+</html>

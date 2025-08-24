@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Berry Bliss</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../navigation.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+</head>
+<body class="apple-page">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-title">
+      <a href="../index.html">
+        <span class="header-accent-tropic">Tropic</span>
+        <span class="header-accent-infusions">Infusions</span>
+      </a>
+    </div>
+    <div class="navbar-links">
+      <a href="../genius.html" class="genius-page">Juice Genius</a>
+    </div>
+  </nav>
+
+  <h1>Apple Berry Bliss</h1>
+  <div class="flavor-container">
+    <img src="../labels/6.png" alt="Apple Berry Bliss Label" class="flavor-image">
+    <div class="flavor-text">
+      <p><strong>Apple</strong> is rich in fiber and polyphenols — supports digestion, gut health, and heart function.</p>
+      <p><strong>Raspberry</strong> is high in fiber and polyphenols; helps fight oxidative stress and supports digestive and heart health.</p>
+      <p><strong>Blackberry</strong> is rich in vitamin C and anthocyanins — supports immune health, skin elasticity, and fights oxidative stress.</p>
+      <p><strong>Blueberry</strong> A brain-boosting superfruit full of anthocyanins — supports memory, cardiovascular health, and cellular repair.</p>
+      <p><strong>Cinnamon</strong> helps regulate blood sugar, support circulation, and boost digestion.</p>
+      <p class="tagline">Crisp, cozy, and antioxidant-rich — great for digestion, circulation, and everyday wellness.</p>
+    </div>
+  </div>
+
+  <footer class="footer-bar">
+    © 2025 Tropic Infusions – All Rights Reserved |
+    <a href="https://instagram.com/tropicinfusions" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/tropicinfusions" target="_blank">Facebook</a>
+  </footer>
+
+  <!-- ✅ Background Music (Autoplay Fix) -->
+  <audio id="bg-music" autoplay loop muted>
+    <source src="../music/revenge.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("bg-music");
+
+    // Resume saved playback position if available
+    const savedTime = localStorage.getItem("bgMusicTime");
+    if (savedTime) {
+      audio.currentTime = parseFloat(savedTime);
+    }
+
+    // Save playback time every second
+    setInterval(() => {
+      if (!audio.paused && !isNaN(audio.currentTime)) {
+        localStorage.setItem("bgMusicTime", audio.currentTime);
+      }
+    }, 1000);
+
+    // Unmute & play audio after first user click
+    document.addEventListener("click", () => {
+      audio.muted = false;
+      audio.play().catch(err => console.log("Playback failed:", err));
+    }, { once: true });
+  </script>
+
+</body>
+</html>

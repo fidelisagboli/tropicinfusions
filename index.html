@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tropic Infusions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Della Respira', serif;
+      height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+    }
+    .background-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .background-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .color-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-45deg, #9440dd, #ff6ec4, #9eff1f, #6dffb5);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      opacity: 0.45;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 2rem;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 2rem;
+      position: relative;
+    }
+    .ai-coming-soon {
+      margin-left: 1rem;
+      font-size: 0.8rem;
+      font-style: italic;
+      color: #ddd;
+      opacity: 0.8;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    .navbar a:hover {
+      color: #9eff1f;
+      text-shadow: 0 0 12px #9eff1f;
+    }
+    .main-header {
+      margin-top: 15vh;
+      font-family: 'Quattrocento', serif;
+      font-size: 7rem;
+      line-height: 1;
+    }
+    .main-header .header-accent-tropic {
+      color: #9440dd;
+      text-shadow: 0 0 30px #9eff1f, 0 0 50px #9eff1f;
+    }
+    .main-header .header-accent-infusions {
+      color: #9eff1f;
+      text-shadow: 0 0 30px #9440dd, 0 0 50px #9440dd;
+    }
+    .sub-header {
+      margin-top: -2rem;
+      font-size: 2rem;
+      font-style: italic;
+      color: #ffffff;
+      text-shadow: 0 0 15px #9440dd, 0 0 20px #9eff1f;
+    }
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.6);
+        font-size: 0.9rem;
+        color: #ddd;
+        z-index: 999;
+    }
+
+@media (max-width: 600px) {
+  .main-header {
+    font-size: 4.2rem;
+    margin-top: 18vh;
+  }
+  .sub-header {
+    font-size: 1.6rem;
+    padding: 0 1rem;
+    margin-top: -1rem;
+  }
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+  .nav-links {
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .ai-coming-soon {
+    margin-left: 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="background-container">
+    <img src="background/mainmain.png" alt="Tropical Background" class="background-image">
+    <div class="color-overlay"></div>
+  </div>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="music/revenge.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="genius.html">Juice Genius</a>
+      <a href="flavors.html">Our Juices</a>
+      <a href="about.html">About Us</a>
+    </div>
+  </nav>
+
+  <h1 class="main-header"><span class="header-accent-tropic">Tropic</span> <span class="header-accent-infusions">Infusions</span></h1>
+  <div class="sub-header">Mind-blowing fruit, veggie, & spice juice infusions</div>
+
+<footer class="footer-bar">
+  © 2025 Tropic Infusions – All Rights Reserved |
+  <a href="https://instagram.com/tropicinfusions" target="_blank">Instagram</a> |
+  <a href="https://facebook.com/tropicinfusions" target="_blank">Facebook</a>
+</footer>
+
+
+  <script>
+      window.addEventListener('pageshow', () => {
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.style.color = 'white';      // Reset color
+      link.classList.remove('active'); // Reset "active" class if any
+      link.blur();                     // Remove focus highlight
+    });
+  });
+
+  const music = document.getElementById('bg-music');
+  window.addEventListener('beforeunload', () => {
+    localStorage.setItem('musicTime', music.currentTime);
+  });
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTime = localStorage.getItem('musicTime');
+    if (savedTime) {
+      music.currentTime = parseFloat(savedTime);
+    }
+    music.volume = 0.4; // volume tweak
+  });
+  document.addEventListener('click', () => {
+    if (music.paused) {
+      music.play().catch(err => console.log('Autoplay blocked:', err));
+    }
+  });
+  </script>
+</body>
+</html>
+
+

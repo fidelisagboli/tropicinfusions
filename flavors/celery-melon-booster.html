@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celery Melon Booster</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../navigation.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+</head>
+<body class="celery-page">
+
+    <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-title">
+      <a href="../index.html">
+        <span class="header-accent-tropic">Tropic</span>
+        <span class="header-accent-infusions">Infusions</span>
+      </a>
+    </div>
+    <div class="navbar-links">
+      <a href="../genius.html" class="genius-page">Juice Genius</a>
+    </div>
+  </nav>
+
+  <h1>Celery Melon Booster</h1>
+  <div class="flavor-container">
+    <img src="../labels/4.png" alt="Celery Melon Booster Label" class="flavor-image">
+    <div class="flavor-text">
+      <p><strong>Celery</strong> is rich in antioxidants and electrolytes, helps hydrate the body, and supports healthy blood pressure.</p>
+      <p><strong>Watermelon</strong> is packed with lycopene and citrulline for heart health, and offers deep hydration.</p>
+      <p><strong>Lime</strong> is a good source of vitamin C and supports the body’s detox processes.</p>
+      <p><strong>Ginger</strong> boosts circulation and reduces nausea. Aids in overall gut health.</p>
+      <p class="tagline">Hydration meets detox — a crisp, clean sip that supports skin, kidneys, and calm.</p>
+  </div>
+  </div>
+
+    <footer class="footer-bar">
+    © 2025 Tropic Infusions – All Rights Reserved |
+    <a href="https://instagram.com/tropicinfusions" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/tropicinfusions" target="_blank">Facebook</a>
+  </footer>
+
+  <!-- ✅ Background Music (Persistent) -->
+  <audio id="bg-music" autoplay loop>
+    <source src="../music/revenge.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("bg-music");
+
+    // Resume saved playback position if available
+    const savedTime = localStorage.getItem("bgMusicTime");
+    if (savedTime) {
+      audio.currentTime = parseFloat(savedTime);
+    }
+
+    // Save playback time every second
+    setInterval(() => {
+      if (!audio.paused && !isNaN(audio.currentTime)) {
+        localStorage.setItem("bgMusicTime", audio.currentTime);
+      }
+    }, 1000);
+
+    // ✅ Fix: Start audio on first user interaction (bypass browser autoplay block)
+    document.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play().catch(err => console.log("Autoplay blocked:", err));
+      }
+    }, { once: true });
+  </script>
+
+</body>
+</html>
+
+
