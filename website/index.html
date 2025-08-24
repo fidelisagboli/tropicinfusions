@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tropic Infusions — Juice Genius</title>
+
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&family=Della+Respira&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body class="genius-landing">
+  <div class="bg" aria-hidden="true"></div>
+
+  <!-- TOP NAV (shared) -->
+  <nav class="navbar">
+    <a class="brand-link" href="index.html" aria-label="Tropic Infusions Home">
+      <span class="tropic">Tropic</span><span class="infusions">Infusions</span>
+    </a>
+    <div class="navlinks">
+      <a href="flavors.html">Our Juices</a>
+      <a href="about.html">About Us</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT (wrapped so it clears fixed bars) -->
+  <div class="page-content">
+    <main class="hero">
+      <div class="hero-inner">
+        <div class="brand-hero">
+          <h1 class="brand">
+            <span class="brand-tropic">TROPIC</span>
+            <span class="brand-infusions">INFUSIONS</span>
+          </h1>
+          <p class="brand-tagline">Natural Juices</p>
+        </div>
+
+        <div class="tag">Mind‑blowing fruit, veggie, & spice juice infusions.</div>
+
+        <div class="chat">
+          <div id="chatbox" class="chatbox" aria-live="polite"></div>
+
+          <!-- Composer: textarea, then mic + send below, then status/viz -->
+          <form id="composer" class="composer">
+            <textarea id="input" placeholder="Type a question or description (e.g., ‘not too sweet, need energy’)"></textarea>
+
+            <div class="composer-row">
+              <button id="micBtn" type="button" class="btn mic">Hold to Speak</button>
+              <button id="send"  type="submit" class="btn send">Send</button>
+            </div>
+
+            <div class="composer-meta">
+              <span class="chip" id="modeStatus">Ready</span>
+              <div class="viz" id="viz" aria-hidden="true"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- BOTTOM NAV (shared) -->
+  <footer class="footer-bar">
+    © 2025 Tropic Infusions – All Rights Reserved |
+    <a href="https://instagram.com/tropicinfusions" target="_blank" rel="noopener">Instagram</a> •
+    <a href="https://facebook.com/tropicinfusions" target="_blank">Facebook</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Tropic Infusions</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .about-container {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+      font-size: 1.5rem;
+      line-height: 1.8;
+    }
+    .california-note {
+      display: block;
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body class="about-page">
+
+  <!-- Background Music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="music/revenge.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Navbar -->
+<nav class="navbar">
+  <a class="brand-link" href="index.html" aria-label="Tropic Infusions Home">
+    <span class="tropic">Tropic</span><span class="infusions">Infusions</span>
+  </a>
+  <div class="navlinks">
+    <a href="flavors.html">Our Juices</a>
+  </div>
+</nav>
+
+  <!-- About Content -->
+  <div class="about-container">
+    <p>
+      At Tropic Infusions, every bottle is a tropical escape. Inspired by the rich, vibrant flavors of the Caribbean, our blends are crafted to transport you to sun-drenched shores with every sip. Each infusion is designed to melt away stress, quiet the noise of the day, and awaken your senses with a burst of paradise. We carefully select nature’s most flavorful fruits, creating juices that are bold, refreshing, and unforgettable – a true vacation in a bottle.
+      <span class="california-note">Proudly crafted in Northern California.</span>
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-bar">
+    © 2025 Tropic Infusions – All Rights Reserved |
+    <a href="https://instagram.com/tropicinfusions" target="_blank" rel="noopener">Instagram</a> •
+    <a href="https://facebook.com/tropicinfusions" target="_blank">Facebook</a>
+  </footer>
+
+  <!-- Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/687fe0fc416fc119149cd6ac/1j0podmrf';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+
+    // Resume music from last time
+    const music = document.getElementById('bg-music');
+    window.addEventListener('beforeunload', () => {
+      localStorage.setItem('musicTime', music.currentTime);
+    });
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTime = localStorage.getItem('musicTime');
+      if (savedTime) {
+        music.currentTime = parseFloat(savedTime);
+      }
+      music.volume = 0.4;
+    });
+    document.addEventListener('click', () => {
+      if (music.paused) {
+        music.play().catch(err => console.log('Autoplay blocked:', err));
+      }
+    });
+  </script>
+</body>
+</html>
